@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <!-- Incluindo o CSS do Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .espacamento {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container espacamento">
+        <h1 class="text-center">Tabuada</h1>
+        <div class="form-group">
+            <label for="numero">Digite um número:</label>
+            <input type="number" class="form-control" id="numero" placeholder="Digite um número">
+        </div>
+        <button class="btn btn-primary btn-block" onclick="mostrarTabuada()">Mostrar Tabuada</button>
+        <hr>
+        <div id="resultadoTabuada"></div>
+    </div>
+
+    <!-- Incluindo o JavaScript do Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function mostrarTabuada() {
+            var numero = document.getElementById('numero').value;
+            var tabuada = '';
+            for (var i = 1; i <= 10; i++) {
+                tabuada += numero + ' x ' + i + ' = ' + (numero * i) + '<br>';
+            }
+            document.getElementById('resultadoTabuada').innerHTML = tabuada;
+        }
+    </script>
+</body>
+</html>
